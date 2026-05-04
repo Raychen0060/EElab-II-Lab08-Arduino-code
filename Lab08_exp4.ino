@@ -35,23 +35,10 @@ void loop() {
     noTone(speaker); 
     delay(100); 
   } 
-  else if (distance > 15 && distance <= 20) {
-    // 2. 15 ~ 20 cm: 0.5s interval
-    playWarning(500); 
-  } 
-  else if (distance > 10 && distance <= 15) {
-    // 3. 10 ~ 15 cm: 0.2s interval
-    playWarning(200);
-  } 
-  else if (distance > 5 && distance <= 10) {
-    // 4. 5 ~ 10 cm: 0.1s interval
-    playWarning(100);
-  } 
-  else if (distance > 0 && distance <= 5) {
-    // 5. 0 ~ 5 cm: 0.05s interval
-    playWarning(50);
-  }
-
+  else if (distance > 15 && distance <= 20) playWarning(500); 
+  else if (distance > 10 && distance <= 15) playWarning(200);
+  else if (distance > 5 && distance <= 10) playWarning(100);
+  else if (distance > 0 && distance <= 5) playWarning(50);
   delay(10); // 小幅延遲穩定系統
 }
 
