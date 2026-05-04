@@ -25,10 +25,8 @@ void setup() {
 
 void loop() {
   distance = get_distance(Trig_Pins, Echo_Pins);
-  Serial.print("Distance: ");
-  Serial.print(distance);
+  Serial.print("Distance: "); Serial.print(distance);
   Serial.println(" cm");
-
   // 根據題目要求的距離區間設定警報聲間隔
   if (distance > 20) {
     // 1. Over 20 cm: Silent
