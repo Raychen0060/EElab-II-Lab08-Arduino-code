@@ -47,11 +47,9 @@ void loop ()
       last = sum / samp_siz; 
       // now last holds the average of the values in the array 
       // check for a rising curve (= a heart beat) 
-      if (last > before) 
-      { 
+      if (last > before) { 
         rise_count++; 
-        if (!rising && rise_count > rise_threshold) 
-        { 
+        if (!rising && rise_count > rise_threshold) { 
           // Ok, we have detected a rising curve, which implies a heartbeat. 
           // Record the time since last beat, keep track of the two previous 
           // times (first, second, third) to get a weighed average. 
@@ -70,8 +68,7 @@ void loop ()
           second = first; 
         } 
       } 
-      else 
-      { 
+      else { 
         // Ok, the curve is falling 
         rising = false; 
         rise_count = 0; 
